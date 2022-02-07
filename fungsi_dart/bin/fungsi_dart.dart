@@ -21,6 +21,17 @@ void main(List<String> arguments) {
         ((appName != null) ? appName : '');
   }
 
+  // Function labda Expression
+  double? luas_segitiga(double lebar, double panjang) => lebar * panjang;
+
+  // Anonymous Function
+  int? do_math_operator(int number1, int number2, Function operator) =>
+      operator(number1, number2);
+
   print(say('Rijal', 'Hellow'));
   print(say('Rijal', 'Hellow', to: 'TIK', appName: 'Telegram'));
+  print(luas_segitiga(10.0, 30.0)!);
+  print(do_math_operator(10, 20, (a, b) {
+    return a + b;
+  }));
 }
